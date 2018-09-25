@@ -20,10 +20,10 @@ a5paper%                       Taille de page.
 
 %%%%%%%%%%%%%%%%%%%%%%% Paramètres variables %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Taille des partitions grégoriennes.                                                      %%
-\grechangedim{overhepisemalowshift}{.7mm}{scalable}
-\grechangedim{hepisemamiddleshift}{1.4mm}{scalable}
-\grechangedim{overhepisemahighshift}{2.1mm}{scalable}
-\grechangedim{vepisemahighshift}{2.1mm}{scalable}
+%\grechangedim{overhepisemalowshift}{.7mm}{scalable}
+%\grechangedim{hepisemamiddleshift}{1.4mm}{scalable}
+%\grechangedim{overhepisemahighshift}{2.1mm}{scalable}
+%\grechangedim{vepisemahighshift}{2.1mm}{scalable}
 %\grechangestafflinethickness{50} %%% epaisseur des lignes
 \grechangestaffsize{\value{facteur}}%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -65,7 +65,7 @@ a5paper%                       Taille de page.
 
 \def\blindsection#1{\markright{#1}\addcontentsline{toc}{section}{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Début du document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
@@ -97,8 +97,7 @@ a5paper%                       Taille de page.
 \end{tabularx}
 }
 \vspace*{\stretch{1}}
-\part[Procession]{Procession\\
-\large{9h00}\\
+\part[Chants de procession]{Chants de procession\\
 \medskip
 \includegraphics[width=.5\textwidth]{img/ProcessionSeule.png}
 }
@@ -372,7 +371,7 @@ IBAN : FR76 1558 9245 8106 4429 1204 066\\}
 }
 \vspace*{\stretch{1}}
 \tableofcontents
-%\printindex
+\printindex
 \newpage
 
 %\vfill\thispagestyle{empty}
