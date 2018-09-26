@@ -31,9 +31,9 @@ global = {
 soprano = \relative do'' {
   \global
   % En avant la musique !
-  do^"Dernier refrain, voix au ténor" do8 do do4 la sol8 ([la]) sib4 re do8 do do4 fa mi2
+  do^"Dernier refrain, voix au ténor." do8 do do4 la sol8 ([la]) sib4 re do8 do do4 fa mi2
   mi4 fa8 sol, fa4 mi fa la8 ([re]) do([fa]) mi fa re4 mi do2 \breathe
-do8([fa]) mi fa re4 < mi do> <fa la,>2\bar "|."
+do8([fa]) mi fa re4 < mi do> <fa la,>2 \fermata \bar "|."
 }
 
 alto = \relative do' {
@@ -49,7 +49,7 @@ tenor = \relative do' {
   % En avant la musique !
   do4 do8 sib la4 do4 sib8 [(la)] sol4 sib4 la8 sol fa4 la sol2 \breathe
   do,4 fa8 mi fa4 sol la fa la do8 la fa4 sol la2 \breathe
-  la4 do8 la fa4 sol fa2 
+  la4 do8 la fa4 sol fa2 \fermata 
 }
 
 bass = \relative do {
@@ -57,7 +57,7 @@ bass = \relative do {
   % En avant la musique !
 fa4 mi8 mi fa4 fa re sol,  mi' fa8 fa fa4 fa do2
 do4 la8 do fa4 re do sib la8([<fa fa'>]) do' do do4 do fa2
-fa4  do8 do do4 do fa,2
+fa4  do8 do do4 do fa,2 
 }
 
 verse = \lyricmode {

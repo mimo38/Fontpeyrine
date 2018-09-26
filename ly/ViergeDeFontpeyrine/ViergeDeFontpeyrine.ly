@@ -38,7 +38,7 @@ soprano = \relative do'' {
   \partial4 do4 ^"Refrain" do8 sib la4 do4 sib8 [(la)] sol4 sib4 la8 sol fa4 la sol2 \breathe
   do,4 fa8 mi fa4 sol la fa la do8 la fa4 sol la2 \breathe
   la4 do8 la fa4 sol fa2 \bar "||"
-do4 fa8 mi fa4 sol la fa la do8 la fa4 sol fa2
+do4^"Couplet" fa8 mi fa4 sol la fa la do8 la fa4 sol fa2
 do4 fa8 mi fa4 sol la fa la do8 la fa4 sol sol2
 }
 
@@ -149,9 +149,9 @@ bassVerse = \lyricmode {
 	    \remove "Bar_number_engraver"
 	    \override VerticalAxisGroup #'remove-first = ##t }
   }
-  \midi {
-    \tempo 4=95
-  }
+%  \midi {
+   % \tempo 4=95
+ % }
 }
 
 
