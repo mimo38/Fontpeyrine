@@ -7,7 +7,9 @@
   %composer = "Mélodie du XIXe siècle"
   %arranger = "Harmonisation : Jean-Paul Lécot"
   % Supprimer le pied de page par défaut
-  tagline = ##f
+  tagline = ""
+  composer = ""
+
 }
 
 \paper {
@@ -110,28 +112,7 @@ bassVerse = \lyricmode {
  votre a -- mour pour Jé -- sus. 
 }
 
-rehearsalMidi = #
-(define-music-function
- (parser location name midiInstrument lyrics) (string? string? ly:music?)
- #{
-   \unfoldRepeats <<
-     \new Staff = "soprano" \new Voice = "soprano" { \soprano }
-     \new Staff = "alto" \new Voice = "alto" { \alto }
-     \new Staff = "tenor" \new Voice = "tenor" { \tenor }
-     \new Staff = "bass" \new Voice = "bass" { \bass }
-     \context Staff = $name {
-       \set Score.midiMinimumVolume = #0.5
-       \set Score.midiMaximumVolume = #0.5
-       \set Score.tempoWholesPerMinute = #(ly:make-moment 95 4)
-       \set Staff.midiMinimumVolume = #0.8
-       \set Staff.midiMaximumVolume = #1.0
-       \set Staff.midiInstrument = $midiInstrument
-     }
-     \new Lyrics \with {
-       alignBelowContext = $name
-     } \lyricsto $name $lyrics
-   >>
- #})
+
 
 \score {
   \new ChoirStaff <<
@@ -144,7 +125,7 @@ rehearsalMidi = #
     >>
     \new Lyrics \with {
       alignAboveContext = "sa"
-      \override VerticalAxisGroup #'staff-affinity = #DOWN
+        \override Score.PaperColumn #'keep-inside-line = ##t
     } \lyricsto "soprano" \sopranoVerse
     \new Lyrics \lyricsto "alto" \altoVerse
     \new Staff = "tb" \with {
@@ -157,11 +138,13 @@ rehearsalMidi = #
     >>
     \new Lyrics \with {
       alignAboveContext = "tb"
-      \override VerticalAxisGroup #'staff-affinity = #DOWN
+        \override Score.PaperColumn #'keep-inside-line = ##t
     } \lyricsto "tenor" \tenorVerse
     \new Lyrics \lyricsto "bass" \bassVerse
   >>
-  \layout { }
+  \layout {  \context {
+		    \Staff \RemoveEmptyStaves
+		    \override VerticalAxisGroup #'remove-first = ##t }}
   \midi {
     \tempo 4=95
   }

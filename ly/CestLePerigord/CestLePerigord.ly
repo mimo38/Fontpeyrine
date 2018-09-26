@@ -4,6 +4,7 @@
 \header {
    %title = "C'est le Périgord"
 
+
   % Supprimer le pied de page par défaut
   
   tagline = ##f
@@ -55,7 +56,7 @@ t'of -- frir son a -- mour son plus cher tré -- sor.
 A tes pieds Ma -- rie, en un saint trans -- port,
 s'a -- ge -- nouil -- le le Pé -- ri -- gord.
 
- \markup{ \bold {1.}De } la vieil -- le Fran -- ce
+ \set stanza = "1."De  la vieil -- le Fran -- ce
 Nous a -- vons la Foi,
 Et notre Es -- pé -- ran -- ce
 Re -- po -- se sur Toi.
