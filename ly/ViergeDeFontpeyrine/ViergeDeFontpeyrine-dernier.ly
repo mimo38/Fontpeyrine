@@ -2,15 +2,15 @@
 \language "italiano"
 
 \header {
-  title = "Vierge de Fontpeyrine"
-  subtitle = "sur l'air de «Mère de l›Espérance»"
-  subsubtitle = "Chant au ténor"
+ % title = "Vierge de Fontpeyrine"
+ % subtitle = "sur l'air de «Mère de l›Espérance»"
+  %subsubtitle = "Chant au ténor"
   % Supprimer le pied de page par défaut
   tagline = ##f
 }
 
 \paper {
-  #(set-paper-size "a4")
+   #(include-special-characters)
 }
 
 \layout {
@@ -31,7 +31,7 @@ global = {
 soprano = \relative do'' {
   \global
   % En avant la musique !
-  do^"dernier refrain" do8 do do4 la sol8 ([la]) sib4 re do8 do do4 fa mi2
+  do^"Dernier refrain, voix au ténor" do8 do do4 la sol8 ([la]) sib4 re do8 do do4 fa mi2
   mi4 fa8 sol, fa4 mi fa la8 ([re]) do([fa]) mi fa re4 mi do2 \breathe
 do8([fa]) mi fa re4 < mi do> <fa la,>2\bar "|."
 }
@@ -68,86 +68,47 @@ verse = \lyricmode {
   
 }
 
-rehearsalMidi = #
-(define-music-function
- (parser location name midiInstrument lyrics) (string? string? ly:music?)
- #{
-   \unfoldRepeats <<
-     \new Staff = "soprano" \new Voice = "soprano" { \soprano }
-     \new Staff = "alto" \new Voice = "alto" { \alto }
-     \new Staff = "tenor" \new Voice = "tenor" { \tenor }
-     \new Staff = "bass" \new Voice = "bass" { \bass }
-     \context Staff = $name {
-       \set Score.midiMinimumVolume = #0.5
-       \set Score.midiMaximumVolume = #0.5
-       \set Score.tempoWholesPerMinute = #(ly:make-moment 95 4)
-       \set Staff.midiMinimumVolume = #0.8
-       \set Staff.midiMaximumVolume = #1.0
-       \set Staff.midiInstrument = $midiInstrument
-     }
-     \new Lyrics \with {
-       alignBelowContext = $name
-     } \lyricsto $name $lyrics
-   >>
- #})
+
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with {
+    \new Staff = "sa" \with {
       midiInstrument = "choir aahs"
-      instrumentName = \markup \center-column { "Soprano" "Alto" }
+  %    instrumentName = \markup \center-column { "Soprano" "Alto" }
     } <<
       \new Voice = "soprano" { \voiceOne \soprano }
       \new Voice = "alto" { \voiceTwo \alto }
     >>
-    \new Lyrics \with {
-      \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "soprano" \verse
-    \new Staff \with {
+  %  \new Lyrics \with {
+     % alignAboveContext = "sa"
+       % \override Score.PaperColumn #'keep-inside-line = ##t
+   % } \lyricsto "soprano" \sopranoVerse
+    \new Lyrics \lyricsto "alto" \verse
+    
+    \new Staff = "tb" \with {
       midiInstrument = "choir aahs"
-      instrumentName = \markup \center-column { "Ténor" "Basse" }
+     % instrumentName = \markup \center-column { "Ténor" "Basse" }
     } <<
       \clef bass
       \new Voice = "tenor" { \voiceOne \tenor }
       \new Voice = "bass" { \voiceTwo \bass }
     >>
+%    \new Lyrics \with {
+%      alignAboveContext = "tb"
+%        \override Score.PaperColumn #'keep-inside-line = ##t
+%    } \lyricsto "tenor" \tenorVerse
+    \new Lyrics \lyricsto "bass" \verse
   >>
-  \layout { }
+  \layout { 
+    \context {
+            \Score
+	    \remove "Bar_number_engraver"
+	%	    \override VerticalAxisGroup #'remove-first = ##t }
+  }
+  }
   \midi {
     \tempo 4=95
   }
 }
 
-% Fichiers MIDI pour répétitions :
-\book {
-  \bookOutputSuffix "soprano"
-  \score {
-    \rehearsalMidi "soprano" "soprano sax" \verse
-    \midi { }
-  }
-}
-
-\book {
-  \bookOutputSuffix "alto"
-  \score {
-    \rehearsalMidi "alto" "soprano sax" \verse
-    \midi { }
-  }
-}
-
-\book {
-  \bookOutputSuffix "tenor"
-  \score {
-    \rehearsalMidi "tenor" "tenor sax" \verse
-    \midi { }
-  }
-}
-
-\book {
-  \bookOutputSuffix "bass"
-  \score {
-    \rehearsalMidi "bass" "tenor sax" \verse
-    \midi { }
-  }
-}
 
