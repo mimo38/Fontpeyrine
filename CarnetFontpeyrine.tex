@@ -70,41 +70,10 @@ a5paper%                       Taille de page.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-%\maketitle
-{\pagestyle{empty}
-\foule{\includepdf{img/Couverture}}
-\schola{\includepdf{Couverture-schola}}
-\clearpage}
-
-\vspace*{\stretch{1}}
-
-{
-\def\arraystretch{1}
-{\centering\Large\textbf{Programme du Jubilé}\par}
-
-\medskip\thispagestyle{empty}
-
-\begin{tabularx}{\textwidth-\parindent}{l!{:}X}
-\multicolumn{2}{l}{\textbf{Dimanche 2 juillet}}\\
-9h00	& Procession.
-	\lieu{Départ de l'église de Tursac}\\
-10h30	& Messe par son Excellence Mgr de Galarreta.
-	\lieu{Sanctuaire}\\
-12h00	& Repas tiré du sac\\
-12h00	& Ouverture des stands\\
-15h00	& Bénédiction solennelle de la Croix du Jubilé.\\
-15h00	& Traditionelle procession du chapelet\\
-17h00   & Clôture de la journée\\
-\end{tabularx}
-}
-\vspace*{\stretch{1}}
 \part[Chants de procession]{Chants de procession\\
 \medskip
 \includegraphics[width=.5\textwidth]{img/ProcessionSeule.png}
 }
-
-Abb-Jean-Robin-1920-2002-Kyrie
-\lilypondfile[staffsize=19]{ly/Abb-Jean-Robin-1920-2002-Kyrie.ly}
 
 \titre{Les saints et les anges}
 \chanson[position=2col,numero=1]{ly/AveMariaDeLourdes/LesSaintsEtLesAnges}
@@ -127,9 +96,6 @@ Abb-Jean-Robin-1920-2002-Kyrie
 \titre[espace=15]{Laudate Mariam}
 \chanson[position=2col,numero=1]{ly/LaudateMariam/LaudateMariam}
 
-\titre[espace=15]{J'irai la voir un jour}
-\chanson[position=2col,numero=1]{ly/JIraiLaVoirUnJour/JIraiLaVoirUnJour}
-
 \titre[espace=15]{Ave Maris Stella}
 \chanson[position=2col,numero=1]{ly/AveMarisStella/AveMarisStella}
 
@@ -138,12 +104,6 @@ Abb-Jean-Robin-1920-2002-Kyrie
 
 \titre[espace=15]{Je mets ma confiance}
 \chanson[position=2col,numero=1]{ly/JeMetsMaConfiance/JeMetsMaConfiance}
-
-\titre[espace=15]{J'irai la voir un jour}
-\chanson[position=2col,numero=1]{ly/JIraiLaVoirUnJour/JIraiLaVoirUnJour}
-
-\titre[espace=15]{J'irai la voir un jour}
-\chanson[position=2col,numero=1]{ly/JIraiLaVoirUnJour/JIraiLaVoirUnJour}
 
 \titre[espace=3]{Vierge de Fontpeyrine}
 \lilypondfile[staffsize=19]{ly/ViergeDeFontpeyrine/ViergeDeFontpeyrine.ly}
@@ -155,6 +115,7 @@ Abb-Jean-Robin-1920-2002-Kyrie
 \chanson[position=2col,numero=2]{ly/CestLePerigord/CestLePerigord}
 
 \titre{Litanies de la très sainte Vierge}
+
 
 \part[Messe de la Visitation]{Messe de la Visitation\\
 \bigskip
