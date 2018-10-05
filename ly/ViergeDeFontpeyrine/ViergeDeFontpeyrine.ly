@@ -117,40 +117,29 @@ bassVerse = \lyricmode {
   \new ChoirStaff <<
     \new Staff = "sa" \with {
       midiInstrument = "choir aahs"
-  %    instrumentName = \markup \center-column { "Soprano" "Alto" }
     } <<
       \new Voice = "soprano" { \voiceOne \soprano }
       \new Voice = "alto" { \voiceTwo \alto }
     >>
-  %  \new Lyrics \with {
-     % alignAboveContext = "sa"
-       % \override Score.PaperColumn #'keep-inside-line = ##t
-   % } \lyricsto "soprano" \sopranoVerse
     \new Lyrics \lyricsto "alto" \altoVerse
     
     \new Staff = "tb" \with {
       midiInstrument = "choir aahs"
-     % instrumentName = \markup \center-column { "Ténor" "Basse" }
     } <<
       \clef bass
       \new Voice = "tenor" { \voiceOne \tenor }
       \new Voice = "bass" { \voiceTwo \bass }
     >>
-%    \new Lyrics \with {
-%      alignAboveContext = "tb"
-%        \override Score.PaperColumn #'keep-inside-line = ##t
-%    } \lyricsto "tenor" \tenorVerse
+
     \new Lyrics \lyricsto "bass" \bassVerse
   >>
   \layout { 
     \context {
             \Score
 	    \remove "Bar_number_engraver"
-	    \override VerticalAxisGroup #'remove-first = ##t }
+	    \override VerticalAxisGroup #'remove-first = ##t 
+    }
   }
-%  \midi {
-   % \tempo 4=95
- % }
 }
 
 
