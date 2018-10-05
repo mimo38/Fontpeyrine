@@ -52,7 +52,6 @@ alto = \relative do' {
   \break
 do4 fa8 mi fa4 sol la fa la do8 la fa4 sol fa2
 do4 fa8 mi fa4 sol la fa la do8 la fa4 sol sol2\bar "|."
-\mark "D.C."
 }
 
 tenor = \relative do' {
