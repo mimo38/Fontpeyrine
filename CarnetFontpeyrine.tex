@@ -70,25 +70,31 @@ a5paper%                       Taille de page.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-\part[Chants de procession]{Chants de procession\\
+\part[Chants]{Chants\\
 \medskip
 \includegraphics[width=.5\textwidth]{img/ProcessionSeule.png}
 }
+\addcontentsline{toc}{section}{Chants}
+
+\titre[espace=3]{Vierge de Fontpeyrine}
+\lilypondfile[staffsize=15]{ly/ViergeDeFontpeyrine/ViergeDeFontpeyrine.ly}
+\chanson[position=2col,numero=2,premiercouplet=2,refrain=non]{ly/ViergeDeFontpeyrine/ViergeDeFontpeyrine}
+%\lilypondfile[staffsize=15]{ly/ViergeDeFontpeyrine/ViergeDeFontpeyrine-dernier.ly}
+
+\titre{C'est le Périgord}
+\lilypondfile[staffsize=15]{ly/CestLePerigord/CestLePerigord.ly}
+\chanson[position=2col,numero=2,premiercouplet=2,refrain=non]{ly/CestLePerigord/CestLePerigord}
+
+\titre{Notre-Dame du Périgord}
+\lilypondfile[staffsize=15]{ly/NotreDameDuPerigord/NotreDameDuPerigord.ly}
+\chanson[position=2col,numero=2,premiercouplet=2,refrain=non]{ly/NotreDameDuPerigord/NotreDameDuPerigord}
 
 \titre{Les saints et les anges}
 \chanson[position=2col,numero=1]{ly/AveMariaDeLourdes/LesSaintsEtLesAnges}
 
-\titre[espace=15]{Nous voulons Dieu}
-\chanson[position=2col,numero=1]{ly/NousVoulonsDieu/NousVoulonsDieu}
 
 \titre[espace=15]{J'irai la voir un jour}
 \chanson[position=2col,numero=1]{ly/JIraiLaVoirUnJour/JIraiLaVoirUnJour}
-
-\titre[espace=15]{Tandis que le monde proclame}
-\chanson[position=2col,numero=1]{ly/ParleCommandeRegne/ParleCommandeRegne}
-
-\titre[espace=15]{Je suis chrétien}
-\chanson[position=2col,numero=1]{ly/JeSuisChretien/JeSuisChretien}
 
 \titre[espace=15]{Vierge sainte}
 \chanson[position=2col,numero=1]{ly/ViergeSainte/ViergeSainte}
@@ -105,20 +111,23 @@ a5paper%                       Taille de page.
 \titre[espace=15]{Je mets ma confiance}
 \chanson[position=2col,numero=1]{ly/JeMetsMaConfiance/JeMetsMaConfiance}
 
-\newpage
-\titre[espace=3]{Vierge de Fontpeyrine}
-\lilypondfile[staffsize=15]{ly/ViergeDeFontpeyrine/ViergeDeFontpeyrine.ly}
-\chanson[position=2col,numero=2,premiercouplet=2,refrain=non]{ly/ViergeDeFontpeyrine/ViergeDeFontpeyrine}
-%\lilypondfile[staffsize=15]{ly/ViergeDeFontpeyrine/ViergeDeFontpeyrine-dernier.ly}
+\titre{Chez nous soyez Reine}
+\chanson[position=2col,numero=1]{ly/ChezNousSoyezReine/ChezNousSoyezReine}
 
-\titre{C'est le Périgord}
-\lilypondfile[staffsize=15]{ly/CestLePerigord/CestLePerigord.ly}
-\chanson[position=2col,numero=2,premiercouplet=2,refrain=non]{ly/CestLePerigord/CestLePerigord}
+\titre{J'irai la voir un jour}
+\chanson[position=2col,numero=1]{ly/JIraiLaVoirUnJour/JIraiLaVoirUnJour}
 
-\titre{Notre-Dame du Périgord}
-\lilypondfile[staffsize=15]{ly/NotreDameDuPerigord/NotreDameDuPerigord.ly}
-\chanson[position=2col,numero=2,premiercouplet=2,refrain=non]{ly/NotreDameDuPerigord/NotreDameDuPerigord}
+\titre[espace=15]{Tandis que le monde proclame}
+\chanson[position=2col,numero=1]{ly/ParleCommandeRegne/ParleCommandeRegne}
 
+\titre[espace=15]{Je suis chrétien}
+\chanson[position=2col,numero=1]{ly/JeSuisChretien/JeSuisChretien}
+
+\titre{Je suis chrétien}
+\chanson[position=2col,numero=1]{ly/JeSuisChretien/JeSuisChretien}
+
+\titre[espace=15]{Nous voulons Dieu}
+\chanson[position=2col,numero=1]{ly/NousVoulonsDieu/NousVoulonsDieu}
 
 \titre{Litanies de la très sainte Vierge}
 \input{tex/LitaniesTSV.tex}
@@ -290,21 +299,19 @@ Ainsi soit-il.\\}}}
 
 \clearpage
 \part{Kyriale}
-\section{Kyriale VII}
-\titre{Kyrie}
+\section{Kyriale VIII}
 \cantus{Kyriale}{Kyrie-VIII}{}{5.}
-
-\titre{Gloria}
 \cantus{Kyriale}{Gloria-VIII}{}{5.}
-
-\titre{Sanctus}
 \cantus{Kyriale}{Sanctus-VIII}{}{6.}
-
-\titre{Agnus Dei}
 \cantus{Kyriale}{Agnus-VIII}{}{6.}
-
-\titre{Ite missa est}
 \cantus{Kyriale}{Ite-VIII}{}{5.}
+
+\section{Kyriale IX}
+\cantus{Kyriale}{Kyrie-IX}{}{1.}
+\cantus{Kyriale}{Gloria-IX}{}{7.}
+\cantus{Kyriale}{Sanctus-IX}{}{5.}
+\cantus{Kyriale}{Agnus-IX}{}{1.}
+\cantus{Kyriale}{Ite-IX}{}{1.}
 
 \part[Procession du chapelet]{Procession du chapelet\\
 %\large{9h00}\\
@@ -315,14 +322,7 @@ Ainsi soit-il.\\}}}
 %\includegraphics[width=.3\textwidth]{img/Monument.png}
 %}
 
-\titre{Chez nous soyez Reine}
-\chanson[position=2col,numero=1]{ly/ChezNousSoyezReine/ChezNousSoyezReine}
 
-\titre{J'irai la voir un jour}
-\chanson[position=2col,numero=1]{ly/JIraiLaVoirUnJour/JIraiLaVoirUnJour}
-
-\titre{Je suis chrétien}
-\chanson[position=2col,numero=1]{ly/JeSuisChretien/JeSuisChretien}
 
 \newpage
 \vspace*{\stretch{1}}
