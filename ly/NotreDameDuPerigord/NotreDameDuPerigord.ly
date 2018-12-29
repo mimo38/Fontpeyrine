@@ -2,16 +2,13 @@
 \language "italiano"
 
 \header {
-  title = "Souris à notre prière"
-  subtitle = "Notre-Dame du Périgord"
-  composer = "Louis Boyer"
+  %title = "Souris à notre prière"
+  %subtitle = "Notre-Dame du Périgord"
+  %composer = "Louis Boyer"
   % Supprimer le pied de page par défaut
   tagline = ##f
 }
 
-\paper {
-  #(set-paper-size "a4")
-}
 
 \layout {
   \context {
