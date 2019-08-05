@@ -126,11 +126,12 @@ a5paper%                       Taille de page.
 \input{tex/LitaniesTSV.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\part[Messe]{Le Saint-Sacrifice de la Messe\\
+\part[Ordinaire de la Messe]{Le Saint-Sacrifice de la Messe\\
 %\large{9h00}\\
 \medskip
 \includegraphics[width=.7\textwidth]{img/Monument.png}}
-
+\label{Ordo}
+\include{tex/OrdoBref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \part[Messe de la Visitation]{Messe de la Visitation\\
 \bigskip
@@ -139,7 +140,7 @@ a5paper%                       Taille de page.
 \rubrica{ Le 2 juillet 1769, fête de la Visitation, un orage, tel qu'on n'en avait pas vu depuis longtemps, dévasta les campagnes de Saint-Cyprien, du Bugue, et de Terrasson. La paroisse de Tursac et le sanctuaire de Fontpeyrine furent seuls épargnés.
 C'est pourquoi, les représentants de la ville de Tursac et sa pieuse population firent vœu d'aller au sanctuaire tous les ans en procession, au jour anniversaire du bienfait, pour remercier Notre-Dame de Fontpeyrine.}}
 
-\rubrica{La messe est à la page \emph{X} excepté les textes propres qui suivent~:}
+\rubrica{La messe est à la page \emph{\pageref{OrdoBref}} excepté les textes propres qui suivent~:}
 
 \subsection*{Introït}
 
@@ -148,23 +149,13 @@ C'est pourquoi, les représentants de la ville de Tursac et sa pieuse population
 \versio{\vb\ Eructávit cor meum verbum bonum~: dico ego ópera mea Regi. \vb\ Glória Patri.}{De mon cœur a jailli une parole excellente, c’est que je consacre mes œuvres à mon Roi. \vb\ Gloire au Père.}
 
 \subsection*{Collecte}
-\versio{%
-\vb\ Dóminus vobíscum.}{%
-\vb\ Le Seigneur soit avec vous.}
-
-\reponsegras{%
-\rb\ Et cum spíritu tuo.}{%
-\rb\ Et avec votre esprit.}
-
-\versio{Orémus.\\
-Fámulis tuis, quǽsumus, Dómine, cæléstis grátiæ munus impertíre~: ut, quibus beátæ Vírginis partus éxstitit salútis exórdium~; Visitatiónis eius votiva sollémnitas, pacis tríbuat increméntum. Per Dóminum.}
 {Prions\\
 Seigneur, nous vous prions d’accorder à vos serviteurs le don de la grâce céleste~: et, comme l’enfantement de la bienheureuse Vierge a été le principe de leur salut~; qu’ainsi la pieuse solennité de sa Visitation leur procure un accroissement de paix. Par Notre Seigneur.}
 \reponsegras{%
 \rb\ Amen.}{%
 \rb\ Ainsi soit-il.}
 
-\subsection*{Lecture du Livre de la Sagesse.}
+\subsection*{Epître : Lecture du Livre de la Sagesse.}
 \rubrica{Cant. 2, 8-14.}
 Voici qu’il vient, bondissant sur les montagnes, sautant sur les collines. Mon bien-aimé est semblable à la gazelle, ou au faon des biches. Le voici, il est derrière notre mur, regardant par la fenêtre, épiant par le treillis. Voici, mon bien-aimé me dit~: "Lève-toi, hâte-toi, mon amie, ma colombe, ma belle, et viens ! Car voici que l’hiver est fini~; la pluie a cessé, elle a disparu. Les fleurs ont paru sur notre terre, le temps des chants est arrivé~; la voix de la tourterelle s’est fait entendre dans nos campagnes~; le figuier pousse ses fruits naissants, les vignes en fleur donnent son parfum. Lève-toi, mon amie, ma belle, et viens ! Ma colombe, qui te tiens dans la fente du rocher, dans l’abri des parois escarpées, montre-moi ton visage, que ta voix résonne à mes oreilles~; car ta voix est douce, et ton visage charmant.
 \textbf{\rb\ Deo grátias.}
@@ -175,8 +166,8 @@ En ces jours-là~: Marie partit et s’en alla en hâte vers la montagne, en une
 \reponsegras{%
 \rb\ Laus tibi Christe.}{%
 \rb\ Christ, louange à vous.}
-
-
+\subsection*{Antiene d'offertoire}
+\subsection*{Oraison Secrète}
 
 \subsection*{Chant de communion}
 
@@ -190,7 +181,10 @@ Bienheureux le sein de la Vierge Marie, qui a porté le Fils du Père éternel.
 \rb\ Amen.}{%
 \rb\ Ainsi soit-il.}
 
-\subsection{Prière de Fontpeyrine}
+\part[Messe de l'Assomption - 15 Août]{Messe de l'Assomption]
+
+
+\addchap{Prière de Fontpeyrine}
 
 {\centering {\textit{Notre-Dame de Fontpeyrine,\\
 qui depuis des
