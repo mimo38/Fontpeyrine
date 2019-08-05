@@ -10,7 +10,11 @@
 }
 
 \paper {
-  #(set-paper-size "a4")
+  #(set-paper-size "a5")
+ %  system-system-spacing = #'((basic-distance . 0.1) (padding . 0))
+% ragged-last-bottom = ##f
+% ragged-bottom = ##f
+% system-count = #10
 }
 
 \layout {
