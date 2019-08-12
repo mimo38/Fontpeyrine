@@ -56,8 +56,12 @@ a5paper%                       Taille de page.
 \def\arraystretch{1.2}
 
 \newcommand{\reponsegras}[2]{
-\versio{\textbf{#1}}{{#2}}
-}
+\versio{\textbf{#1}}{{#2}}}
+
+\newcommand{\ligne}[2]{
+\begin{center}
+\greseparator{#1}{#2}
+\end{center}}
 
 \title{Livret du Pèlerin de Fontpeyrine}
 \date{\includegraphics[width=.2\textwidth]{img/Fontpeyrine-Vierge-source.png}}
