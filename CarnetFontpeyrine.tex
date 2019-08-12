@@ -40,10 +40,11 @@ a5paper%                       Taille de page.
 
 \newcommand{\lieu}[1]{\hfill\linebreak[3]\hspace*{\stretch{1}}\nolinebreak\mbox{\emph{(#1)}}}
 
-\newcommand{\commandement}[1]{\noindent\textbf{#1}}
 
 \newcommand{\schola}[1]{}\newcommand{\foule}[1]{#1}
 \providecommand{\dest}{foule}
+\newcommand{\imagecentre}[2]{
+\begin{center} \includegraphics[height=#1]{img/#2} \end{center}}
 
 \newcommand{\bgimage}[1]{%
 \raisebox{-.45\paperheight}[0pt][0pt]{%
