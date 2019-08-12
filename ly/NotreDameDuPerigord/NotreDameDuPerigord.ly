@@ -4,7 +4,7 @@
 \header {
   %title = "Souris à notre prière"
   %subtitle = "Notre-Dame du Périgord"
-  %composer = "Louis Boyer"
+  composer = "Louis Boyer"
   % Supprimer le pied de page par défaut
   tagline = ##f
 }
