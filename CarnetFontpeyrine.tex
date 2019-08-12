@@ -60,7 +60,7 @@ a5paper%                       Taille de page.
 }
 
 \title{Livret du Pèlerin de Fontpeyrine}
-\date{}
+\date{\includegraphics[width=.5\textwidth]{Fontpeyrine-Vierge-source.png}}
 
 \let\oldaddchap\addchap
 \def\addchap#1{\oldaddchap{#1}\markright{Livret du Pèlerin de Fontpeyrine}}
@@ -71,11 +71,8 @@ a5paper%                       Taille de page.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \maketitle
+
 \addchap{Cantiques}
-
-\medskip
-{\centering \includegraphics[width=.5\textwidth]{img/ProcessionSeule.png}}
-
 %\blindsection{Cantiques}
 \titre[espace=3]{Vierge de Fontpeyrine}
 \lilypondfile[staffsize=15]{ly/ViergeDeFontpeyrine/ViergeDeFontpeyrine.ly}
