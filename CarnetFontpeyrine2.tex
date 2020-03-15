@@ -1,0 +1,234 @@
+% Afficher des recommendations concernant la syntaxe.
+\RequirePackage[orthodox,l2tabu]{nag}
+\RequirePackage{luatex85}
+% Paramètres du document.
+\documentclass[%
+a5paper%                       Taille de page.
+,11pt%                         Taille de police.
+,DIV=15%                       Plus grand => des marges plus petites.
+,titlepage=on%                 Faut-il une page de titre ?
+,headings=optiontoheadandtoc%  Effet des paramètres optionnels de section.
+,headings=small%
+,parskip=false%
+,openany%
+]{scrbook}
+\renewcommand*\partheademptypage{\thispagestyle{empty}}
+\newcounter{facteur}\setcounter{facteur}{17}%%%%%%%%%%%%%% Paramètre pour la taille globale des partitions. par défaut~: 17
+%\usepackage{geometry}
+\usepackage{gredoc,mudoc,lyluatex}
+\usepackage{pdfpages,transparent,array,ltablex}
+
+%%%%%%%%%%%%%%%%%%%%%%% Paramètres variables %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Taille des partitions grégoriennes.                                                      %%
+%\grechangedim{overhepisemalowshift}{.7mm}{scalable}
+%\grechangedim{hepisemamiddleshift}{1.4mm}{scalable}
+%\grechangedim{overhepisemahighshift}{2.1mm}{scalable}
+%\grechangedim{vepisemahighshift}{2.1mm}{scalable}
+%\grechangestafflinethickness{50} %%% epaisseur des lignes
+\grechangestaffsize{\value{facteur}}%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Par souci de clarté, la définition des commandes est reportée dans un document annexe.
+
+%\addtolength{\voffset}{2mm}\addtolength{\headsep}{-2mm}
+%\setlength{\extrarowheight}{2mm}
+
+\addto\captionsfrench{%
+  \renewcommand{\indexname}{Index des chants}%
+}
+
+\pdfcompresslevel=9
+
+\newcommand{\lieu}[1]{\hfill\linebreak[3]\hspace*{\stretch{1}}\nolinebreak\mbox{\emph{(#1)}}}
+
+
+\newcommand{\schola}[1]{}\newcommand{\foule}[1]{#1}
+\providecommand{\dest}{foule}
+\newcommand{\imagecentre}[2]{
+\begin{center} \includegraphics[height=#1]{img/#2} \end{center}}
+
+\newcommand{\bgimage}[1]{%
+\raisebox{-.45\paperheight}[0pt][0pt]{%
+  \transparent{0.3}%
+  \includegraphics[width=.7\paperwidth,height=.7\paperheight,keepaspectratio=true]{img/#1}%
+  }%
+}
+
+\def\arraystretch{1.2}
+
+\newcommand{\reponsegras}[2]{
+\versio{\textbf{#1}}{{#2}}}
+
+\newcommand{\ligne}[2]{
+\begin{center}
+\greseparator{#1}{#2}
+\end{center}}
+
+\title{Livret du Pèlerin de Fontpeyrine}
+\date{\includegraphics[width=.2\textwidth]{img/Fontpeyrine-Vierge-source.png}}
+
+\let\oldaddchap\addchap
+\def\addchap#1{\oldaddchap{#1}\markright{Livret du Pèlerin de Fontpeyrine}}
+
+\def\blindsection#1{\markright{#1}\addcontentsline{toc}{section}{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Début du document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+
+\addchap{Prière de Fontpeyrine}
+{\centering {\textit{\Large{Notre-Dame de Fontpeyrine,\vfill
+qui depuis des siècles accordez de nombreuses faveurs\vfill
+à ceux qui ont recours à votre puissante intercession,\vfill
+obtenez, nous vous en supplions,\vfill
+à nous vos humbles serviteurs, \vfill
+en souvenir de votre bienheureuse Nativité,\vfill
+ce complément de grâce\vfill
+que nous implorons à genoux devant vous.\vfill
+Nous l’attendons avec confiance,\vfill
+malgré notre indignité, ô Mère du Sauveur,\vfill
+de votre maternelle bonté\vfill
+et de votre bienveillante protection.\vfill
+Ainsi soit-il.\vfill}}}}
+\clearpage
+
+\addchap{Cantiques}
+%\blindsection{Cantiques}
+\titre[espace=3]{Vierge de Fontpeyrine}
+\lilypondfile[staffsize=15]{ly/ViergeDeFontpeyrine/ViergeDeFontpeyrine.ly}
+\chanson[position=2col,numero=2,premiercouplet=2,refrain=non]{ly/ViergeDeFontpeyrine/ViergeDeFontpeyrine}
+%\lilypondfile[staffsize=15]{ly/ViergeDeFontpeyrine/ViergeDeFontpeyrine-dernier.ly}
+
+\titre{C'est le Périgord}
+\lilypondfile[staffsize=15]{ly/CestLePerigord/CestLePerigord.ly}
+\chanson[position=2col,numero=2,premiercouplet=2,refrain=non]{ly/CestLePerigord/CestLePerigord}
+
+\titre{Notre-Dame du Périgord}
+\lilypondfile[staffsize=15]{ly/NotreDameDuPerigord/NotreDameDuPerigord.ly}
+\chanson[position=2col,numero=2,premiercouplet=2,refrain=non]{ly/NotreDameDuPerigord/NotreDameDuPerigord}
+
+\titre{Les saints et les anges}
+\chanson[position=2col,numero=1]{ly/AveMariaDeLourdes/LesSaintsEtLesAnges}
+
+
+\titre[espace=15]{J'irai la voir un jour}
+\chanson[position=2col,numero=1]{ly/JIraiLaVoirUnJour/JIraiLaVoirUnJour}
+
+\titre[espace=15]{Vierge sainte}
+\chanson[position=2col,numero=1]{ly/ViergeSainte/ViergeSainte}
+
+\titre[espace=15]{Laudate Mariam}
+\chanson[position=2col,numero=1]{ly/LaudateMariam/LaudateMariam}
+
+\titre[espace=15]{Ave Maris Stella}
+\chanson[position=2col,numero=1]{ly/AveMarisStella/AveMarisStella}
+
+\titre[espace=15]{Reine de France}
+\chanson[numero=1]{ly/ReineDeFrance/ReineDeFrance}
+
+\titre[espace=15]{Je mets ma confiance}
+\chanson[position=2col,numero=1]{ly/JeMetsMaConfiance/JeMetsMaConfiance}
+
+\titre{Chez nous soyez Reine}
+\chanson[position=2col,numero=1]{ly/ChezNousSoyezReine/ChezNousSoyezReine}
+
+\titre[espace=15]{Tandis que le monde proclame}
+\chanson[position=2col,numero=1]{ly/ParleCommandeRegne/ParleCommandeRegne}
+
+\titre{Je suis chrétien}
+\chanson[position=2col,numero=1]{ly/JeSuisChretien/JeSuisChretien}
+
+\titre[espace=15]{Nous voulons Dieu}
+\chanson[position=2col,numero=1]{ly/NousVoulonsDieu/NousVoulonsDieu}
+
+\titre{Litanies de la très sainte Vierge}
+\input{tex/LitaniesTSV.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{tex/OrdoBref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\part[Messe de la Visitation]{Messe de la Visitation\\
+%\bigskip
+%\includegraphics[width=\textwidth]{img/VisitationGiotto.jpg}
+
+\include{tex/Visitation}
+%\part[Messe de l'Assomption - 15 Août]{Messe de l'Assomption}
+
+\include{tex/Assomption}
+
+\include{tex/Nativite}
+
+\clearpage
+\addchap{Kyriale}
+\section{Kyriale VIII}
+\cantus{Kyriale}{Kyrie-VIII}{}{5.}
+\cantus{Kyriale}{Gloria-VIII}{}{5.}
+\cantus{Kyriale}{Sanctus-VIII}{}{6.}
+\cantus{Kyriale}{Agnus-VIII}{}{6.}
+\cantus{Kyriale}{Ite-VIII}{}{5.}
+
+\section{Kyriale IX}
+\cantus{Kyriale}{Kyrie-IX}{}{1.}
+\cantus{Kyriale}{Gloria-IX}{}{7.}
+\cantus{Kyriale}{Sanctus-IX}{}{5.}
+\cantus{Kyriale}{Agnus-IX}{}{1.}
+\cantus{Kyriale}{Ite-IX}{}{1.}
+
+\section{Credo}
+\label{Credo}
+\cantus{Kyriale}{Credo-III}{}{5.}
+
+\input{tex/Penitence.tex}
+\clearpage
+\tableofcontents
+\printindex
+
+\newpage
+\thispagestyle{empty}
+\vspace*{\stretch{1}}
+{\centering{Si vous voulez nous aider, vous pouvez adresser vos dons à :
+
+\textsc{Association Notre-Dame de Fontpeyrine}
+
+
+\textit{adresse administrative :}\\
+5 rue de Clairat,\\
+24100 BERGERAC\\
+
+
+Ordre des chèques : « Notre-Dame de Fontpeyrine »\\
+Ou par virement :\\
+Numéro de compte : 15589 24581 06442912040 66\\
+IBAN : FR76 1558 9245 8106 4429 1204 066\\}
+}
+\vspace*{\stretch{1}}
+\newpage
+
+%\vfill\thispagestyle{empty}
+
+{\thispagestyle{empty}\centering
+\vspace*{\stretch{2}}
+
+\includegraphics[width=.6\textwidth]{img/SceauJubilé.pdf}
+
+{\centering {\textit{Notre-Dame de Fontpeyrine,\\
+qui depuis des
+siècles 
+accordez de nombreuses faveurs\\
+à ceux qui ont recours à votre puissante intercession,\\
+obtenez, nous vous en supplions,\\
+à nous vos humbles serviteurs, \\
+en souvenir de votre bienheureuse Nativité,\\
+ce complément de grâce\\
+que nous implorons à genoux devant vous.\\
+Nous l’attendons avec confiance,\\
+malgré notre indignité, ô Mère du Sauveur,\\
+de votre maternelle bonté\\
+et de votre bienveillante protection.\\
+Ainsi soit-il.\\}}}
+
+\vspace*{\stretch{3}}
+
+\footnotesize Association N-D. de Fontpeyrine\\
+Aumônerie assurée par la Fraternité sacerdotale Saint-Pie-X\par}
+\end{document}
