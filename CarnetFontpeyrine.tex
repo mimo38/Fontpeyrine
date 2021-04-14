@@ -5,7 +5,7 @@
 \documentclass[%
 a5paper%                       Taille de page.
 ,11pt%                         Taille de police.
-,DIV=18%                       Plus grand => des marges plus petites.
+,DIV=auto%                       Plus grand => des marges plus petites.
 ,titlepage=on%                 Faut-il une page de titre ?
 ,headings=optiontoheadandtoc%  Effet des paramètres optionnels de section.
 ,headings=small%
@@ -64,7 +64,7 @@ a5paper%                       Taille de page.
 \end{center}}
 
 \title{Livret du Pèlerin de Fontpeyrine}
-\date{\includegraphics[width=.2\textwidth]{img/Fontpeyrine-Vierge-source.png}}
+\date{\includegraphics[width=.9\textwidth]{img/Fontpeyrine-Vierge-source.png}}
 
 \let\oldaddchap\addchap
 \def\addchap#1{\oldaddchap{#1}\markright{Livret du Pèlerin de Fontpeyrine}}
@@ -174,7 +174,7 @@ Ainsi soit-il.\vfill}}}}
 \cantus{Kyriale}{Agnus-IX}{}{1.}
 \cantus{Kyriale}{Ite-IX}{}{1.}
 
-\section{Credo}
+\section[Credo]{Credo III}
 \label{Credo}
 \cantus{Kyriale}{Credo-III}{}{5.}
 
