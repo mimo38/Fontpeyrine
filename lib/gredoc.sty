@@ -71,7 +71,7 @@
 \RequirePackage{lettrine}
 
 %%% KOMA - Options de titres, de numéros de pages...
-\RequirePackage{scrlayer-scrpage, titlesec}
+\RequirePackage{scrlayer-scrpage}
 \pagestyle{scrheadings}
 \setcounter{secnumdepth}{0}
 \renewcommand*{\partformat}{}
@@ -85,12 +85,6 @@
 \renewcommand*{\chapterpagestyle}{empty}
 \renewcommand*{\indexpagestyle}{empty}
 \clearscrheadfoot\ohead[\pagemark]{{\small\pagemark}}\ihead{{\small\headmark}}
-%\titlespacing{\section}{0pt}{%
-%	1\baselineskip plus .2\baselineskip minus .8\baselineskip}{%
-%	.5\baselineskip plus .4\baselineskip minus .3\baselineskip}
-\titlespacing{\subsection}{0pt}{%
-	1\baselineskip plus .5\baselineskip minus .8\baselineskip}{%
-	.5\baselineskip plus .8\baselineskip minus .3\baselineskip}
 \newcommand{\sectionbreak}{\vspace{0\baselineskip plus 3\baselineskip}\pagebreak[3]\needspace{8\baselineskip}}
 \newcommand{\subsectionbreak}{\vspace{0\baselineskip plus 2\baselineskip}\pagebreak[3]\needspace{3\baselineskip}}
 \newcommand{\paginarectavacua}{\ifthispageodd{\thispagestyle{plain}}{}}
