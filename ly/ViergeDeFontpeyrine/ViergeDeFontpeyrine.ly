@@ -15,7 +15,6 @@
 \paper {
    #(include-special-characters)
 
-  #(set-paper-size "a5")
 }
 
 \layout {
@@ -95,7 +94,7 @@ Vier -- ge de Font -- pey -- ri -- ne nous chan -- tons vos ver -- "tus ;"
  \set stanza = "1."Au val -- lon so -- li -- tai -- re
  Nous som -- mes ac -- cou -- rus,
  Sa -- lu -- er no -- tre Mè -- re,
- Cé -- lé -- bre ses ver -- tus.
+ Cé -- lé -- brer ses ver -- tus.
 }
 
 tenorVerse = \lyricmode {
