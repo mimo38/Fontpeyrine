@@ -296,12 +296,12 @@
 
 %%% Réglages pour les lignes de portée.
 \gresetlinecolor{gregoriocolor}
-\grechangestafflinethickness{40}
-\grechangedim{spacelinestext}{2.7ex}{scalable}
-\grechangedim{spacebeneathtext}{1.2ex}{scalable}
-\grechangedim{abovelinestextraise}{0ex}{scalable}
+%\grechangestafflinethickness{40} %%épaisseur des lignes The default value is same as staff size.
+\grechangedim{spacelinestext}{2.7ex}{scalable} %%The space between the lines and the bottom of the text. Default: 0.60617 cm
+\grechangedim{spacebeneathtext}{1.2ex}{scalable} %%The space beneath the text. Default: 0 cm
+\grechangedim{abovelinestextraise}{0ex}{scalable} %% Height of the text above the note line. Default: -0.1 cm
 \makeatletter
-\grechangedim{bar@finalfinalis@standalone@notext}{1.5ex}{scalable}
+\grechangedim{bar@finalfinalis@standalone@notext}{1.5ex}{scalable} %%Default: 0.29169 cm
 \makeatother
 
 %%% Espace entre les annotations au-dessus de la lettrine
