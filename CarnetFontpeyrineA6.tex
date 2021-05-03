@@ -4,7 +4,7 @@
 % Paramètres du document.
 \documentclass[%
 a5paper%                       Taille de page.
-,14pt%                         Taille de police.
+,13pt%                         Taille de police.
 ,DIV=auto%                       Plus grand => des marges plus petites.
 ,titlepage=on%                 Faut-il une page de titre ?
 ,headings=optiontoheadandtoc%  Effet des paramètres optionnels de section.
@@ -13,6 +13,7 @@ a5paper%                       Taille de page.
 ,openany%
 ]{scrbook}
 \renewcommand*\partheademptypage{\thispagestyle{empty}}
+\def\staffsize{20}%%%%% Taille des partitions ly
 \newcounter{facteur}\setcounter{facteur}{19}%%%%%%%%%%%%%% Paramètre pour la taille globale des partitions. par défaut~: 17
 %\usepackage{geometry}
 \usepackage{gredoc,mudoc,lyluatex}
