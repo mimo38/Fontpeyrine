@@ -64,6 +64,13 @@ a5paper%                       Taille de page.
 \greseparator{#1}{#2}
 \end{center}}
 
+\newcommand{\culdelampe}[2]{
+\begin{center}
+\vspace*{\stretch{1}}
+\includegraphics[width=#1]{#2}
+\vspace*{\stretch{1}}
+\end{center}}
+
 \title{Livret du Pèlerin de Fontpeyrine}
 \date{\includegraphics[width=.3\textwidth]{img/Fontpeyrine-Vierge-source.png}}
 
@@ -78,6 +85,7 @@ a5paper%                       Taille de page.
 \maketitle
 
 \addchap{Prière à Notre-Dame de Fontpeyrine}
+\culdelampe{3cm}{img/CulsDeLampe/Chapeau.pdf}
 {\centering {\textit{\Large{Notre-Dame de Fontpeyrine,\vfill
 qui depuis des siècles accordez de nombreuses faveurs\vfill
 à ceux qui ont recours à votre puissante intercession,\vfill
@@ -92,6 +100,8 @@ de votre maternelle bonté\vfill
 et de votre bienveillante protection.\vfill
 Ainsi soit-il.\vfill
 Notre-Dame de Fontpeyrine, priez pour nous (trois fois).}}}}
+\culdelampe{3cm}{img/CulsDeLampe/Base.pdf}
+
 \clearpage
 
 \addchap{Cantiques}
@@ -99,6 +109,7 @@ Notre-Dame de Fontpeyrine, priez pour nous (trois fois).}}}}
 \section{Vierge de Fontpeyrine}
 \lilypondfile[staffsize=15]{ly/ViergeDeFontpeyrine/ViergeDeFontpeyrine.ly}
 \chanson[position=2col,numero=2,premiercouplet=2,refrain=non]{ly/ViergeDeFontpeyrine/ViergeDeFontpeyrine}
+\culdelampe{3cm}{img/CulsDeLampe/cul-de-lampe.pdf}
 %\lilypondfile[staffsize=15]{ly/ViergeDeFontpeyrine/ViergeDeFontpeyrine-dernier.ly}
 
 \clearpage
@@ -158,12 +169,14 @@ Notre-Dame de Fontpeyrine, priez pour nous (trois fois).}}}}
 \section{Nous voulons Dieu}
 \chanson[position=2col,numero=1]{ly/NousVoulonsDieu/NousVoulonsDieu}
 
-\needspace{8\baselineskip}
+\needspace{20\baselineskip}
 \section{Litanies de la très sainte Vierge}
 \input{tex/LitaniesTSV.tex}
+\culdelampe{5cm}{img/CulsDeLampe/rosace-4.pdf}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{tex/OrdoBref}
+\include{tex/OrdinaireComplet}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\includegraphics[width=\textwidth]{img/VisitationGiotto.jpg}
 
@@ -192,6 +205,8 @@ Notre-Dame de Fontpeyrine, priez pour nous (trois fois).}}}}
 \section[Credo]{Credo III}
 \label{Credo}
 \cantus{Kyriale}{Credo-III}{}{5.}
+
+\culdelampe{3cm}{img/CulsDeLampe/rosace-4.pdf}
 
 \input{tex/Penitence.tex}
 \clearpage
