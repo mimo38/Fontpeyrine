@@ -65,11 +65,9 @@ a5paper%                       Taille de page.
 \end{center}}
 
 \newcommand{\culdelampe}[2]{
-\vspace*{\stretch{1}}
 \begin{center}
 \includegraphics[width=#1]{#2}
 \end{center}
-\vspace*{\stretch{1}}
 }
 
 \title{Livret du Pèlerin de Fontpeyrine}
@@ -197,7 +195,9 @@ Notre-Dame de Fontpeyrine, priez pour nous (trois fois).}}}}
 \cantus{Kyriale}{Sanctus-VIII}{}{6.}
 \cantus{Kyriale}{Agnus-VIII}{}{6.}
 \cantus{Kyriale}{Ite-VIII}{}{5.}
+\vspace*{\stretch{1}}
 \culdelampe{3cm}{img/CulsDeLampe/foliage.pdf}
+\vspace*{\stretch{1}}
 
 \section{Kyriale IX}
 \cantus{Kyriale}{Kyrie-IX}{}{1.}
@@ -212,8 +212,9 @@ Notre-Dame de Fontpeyrine, priez pour nous (trois fois).}}}}
 \section[Credo]{Credo III}
 \label{Credo}
 \cantus{Kyriale}{Credo-III}{}{5.}
-
+\vspace*{\stretch{1}}
 \culdelampe{5cm}{img/CulsDeLampe/rosace-4.pdf}
+\vspace*{\stretch{1}}
 
 \input{tex/Penitence.tex}
 \clearpage
@@ -224,7 +225,9 @@ Notre-Dame de Fontpeyrine, priez pour nous (trois fois).}}}}
 \addsec{Litanies de la très sainte Vierge}
 \input{tex/LitaniesTSV.tex}
 \input{tex/ActionDeGraces.tex}
+\vspace*{\stretch{1}}
 \culdelampe{5cm}{img/Coeur-ND.png}
+\vspace*{\stretch{1}}
 
 \tableofcontents
 \printindex
